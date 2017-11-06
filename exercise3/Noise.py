@@ -18,9 +18,9 @@ def Add_gaussian_Noise(img,mean,sigma):
 
 def Add_salt_pepper_Noise(img,pa,pb):
     row,col,ch=img.shape
-#Controls the amount of black spots in the noise
+    #Controls the amount of black spots in the noise
     amount1=row*col*pa
-#Controls the amount of white spots in the noise    
+    #Controls the amount of white spots in the noise    
     amount2=row*col*pb
     for i in range(int(amount1)):
         img[int(np.random.uniform(0,row))][int(np.random.uniform(0,col))]=0
@@ -33,7 +33,7 @@ def main():
     cv2.namedWindow('Original image')
     cv2.imshow('Original',img)
 
-#gaussian_Noise
+    #gaussian_Noise
     noise_img=img.copy()
     mean=0
     sigma=50
@@ -53,7 +53,7 @@ def main():
     cv2.imshow('Median filter',noise_dst2)
 
 
-#salt_pepper_Noise
+    #salt_pepper_Noise
     noise_img2=img.copy()
     pa=0.01
     pb=0.01
