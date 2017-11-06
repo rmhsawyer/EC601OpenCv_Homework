@@ -8,7 +8,7 @@ Created on Sun Nov  5 17:26:41 2017
 
 import cv2
 import numpy as np 
-import random
+
 
 def Add_gaussian_Noise(img,mean,sigma):
     noiseArr = img.copy()
@@ -23,9 +23,9 @@ def Add_salt_pepper_Noise(img,pa,pb):
 #Controls the amount of white spots in the noise    
     amount2=row*col*pb
     for i in range(int(amount1)):
-        img[int(random.uniform(0,row))][int(random.uniform(0,col))]=0
+        img[int(np.random.uniform(0,row))][int(np.random.uniform(0,col))]=0
     for i in range(int(amount2)):
-        img[int(random.uniform(0,row))][int(random.uniform(0,col))]=255
+        img[int(np.random.uniform(0,row))][int(np.random.uniform(0,col))]=255
 
 def main():
 
