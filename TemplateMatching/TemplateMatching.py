@@ -25,8 +25,8 @@ def TemplateMatching(src, temp, stepsize): # src: source image, temp: template i
             # ------------------ Put your code below ------------------
             
             mul = (src[i:i+temp.shape[0],j:j+temp.shape[1]]-mean_window)*(temp-mean_temp)
-            sum_part = sum(sum(mul[i]) for i in range(len(mul)))
-            corr = (1/float((temp.shape[0])*(temp.shape[1]))) * sum_part / ((var_temp)*(var_window))
+            get_sum = sum(sum(mul[i]) for i in range(len(mul)))
+            corr = (1/float((temp.shape[0])*(temp.shape[1]))) * get_sum / ((var_temp)*(var_window))
             
             if corr > max_corr:
                 max_corr = corr;
