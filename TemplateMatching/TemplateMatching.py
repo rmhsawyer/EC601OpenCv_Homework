@@ -42,6 +42,7 @@ match_img = cv2.cvtColor(source_img, cv2.COLOR_GRAY2RGB)
 print(temp.shape[1])
 print(temp.shape[0])
 
+
 # Draw a red rectangle on match_img to show the template matching result
 # ------------------ Put your code below ------------------
 
